@@ -117,8 +117,15 @@
                 box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
             }
             .contact-form {
-                width: 90%;
+                width: 100%;
                 padding: 10px;
+            }
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%;
+                max-width: 100%; /* 确保输入框宽度不会超过父容器 */
+                box-sizing: border-box; /* 确保 padding 和 border 被包含在宽度内 */
             }
         }
     </style>

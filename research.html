@@ -44,7 +44,7 @@
         nav a.active {
             color: red;
             font-weight: bold;
-            bborder-bottom: none;
+            border-bottom: none;
         }
         a {
             color: #396c90;
@@ -52,23 +52,6 @@
         }
         a:hover {
             color: #ff8c00; 
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .text {
-            width: 60%;
-        }
-        .image {
-            width: 35%;
-            margin-top: 60px; 
-        }
-        .image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
         }
         h2 {
             color: #3b5998;
@@ -78,41 +61,6 @@
             margin: 10px 0;
             line-height: 1.4;
         }
-        .contact {
-            margin-top: 20px;
-        }
-        .contact a {
-            margin-right: 10px;
-            color: #888;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .contact a:hover {
-            color: #000;
-        }
-        @media (max-width: 768px) {
-            header {
-                font-size: 28px;
-            }
-            .content {
-                flex-direction: column; /* 將方向按照行的方式顯示 */
-                align-items: center; /* 置中對齊內容 */
-            }
-            .text {
-                width: 100%; /* 讓文字部分佔據整個寬度 */
-                text-align: left; /* 文字置中對齊 */
-            }
-            .image {
-                width: 100%; /* 讓圖片部分佔據整個寬度 */
-                margin: 20px auto 0 auto; 
-                text-align: center;
-            }
-            .image img {
-                width: 90%; /* 讓圖片寬度為90%，以留出一些空白 */
-                border-radius: 8px;
-                box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-            }
-        }
     </style>
 </head>
 <body>
@@ -121,19 +69,16 @@
             Ernie Cheng-Xiang Zhuang
         </header>
         <nav>
-            <a href="https://ernie-zhuang.github.io/Web/">About</a>
-            <a href="#">Research</a>
-            <a href="https://ernie-zhuang.github.io/Web/resource.html" class="active">Resources</a>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="resources.html" class="active">Resources</a>
             <a href="https://enirezhuang.blogspot.com" target="_blank">Blog</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div class="content">
-            <div class="text">
-                <p>I plan to share some useful resources here in the future, including datasets, code, websites, and more.</p>
-            </div>
-            <div class="image">
-                <img src="https://ernie-zhuang.github.io/Web/Me.JPG" alt="Ernie Cheng-Xiang Zhuang">
-            </div>
+            <h2>Working Papers</h2>
+            <p>Licensing Contracts among Asymmetric Manufacturers with Differentiated Goods, with Stephen Jui-Hsien Chou.</p>
+            <h2>​Work in Progress</h2>
         </div>
     </div>
 </body>

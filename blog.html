@@ -1,169 +1,142 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #502a18}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #97007e}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #b50013}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #491187}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #0d6401}
-    span.s1 {color: #6f5a1e}
-    span.s2 {color: #b50013}
-    span.s3 {color: #000000}
-    span.s4 {color: #97007e}
-    span.s5 {color: #1400c4}
-    span.s6 {color: #885d30}
-    span.s7 {color: #491187}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Ernie Cheng-Xiang Zhuang</title>
+    <link rel="icon" type="image/png" href="https://erniezhuang.com/myfavicon.png">
+    <link rel="icon" type="image/x-icon" href="https://erniezhuang.com/myfavicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            font-family: 'Satisfy', cursive; 
+            font-size: 40px;
+            color: #3b5998;
+            margin-bottom: 20px;
+            font-weight: bold; 
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        nav a.active {
+            color: red;
+            font-weight: bold;
+            border-bottom: none;
+        }
+        a {
+            color: #396c90;
+            text-decoration: none; 
+        }
+        a:hover {
+            color: #ff8c00; 
+        }
+        .tags {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .tags a {
+            display: inline-block;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 5px 10px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .tags a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        h2 {
+            color: #3b5998;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+        .blog-post {
+            margin-bottom: 40px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function filterByTag(tag) {
+            const posts = document.querySelectorAll('.blog-post');
+            posts.forEach(post => {
+                if (tag === 'all' || post.classList.contains(tag)) {
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p2">&lt;html <span class="s1">lang</span>=<span class="s2">"en"</span>&gt;</p>
-<p class="p2">&lt;head&gt;</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;meta <span class="s1">charset</span>=<span class="s2">"UTF-8"</span>&gt;</p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;meta </span><span class="s1">name</span><span class="s4">=</span>"viewport"<span class="s4"> </span><span class="s1">content</span><span class="s4">=</span>"width=device-width, initial-scale=1.0"<span class="s4">&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">    </span><span class="s4">&lt;title&gt;</span>Blog - Ernie Cheng-Xiang Zhuang<span class="s4">&lt;/title&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;link </span><span class="s1">rel</span><span class="s4">=</span>"icon"<span class="s4"> </span><span class="s1">type</span><span class="s4">=</span>"image/png"<span class="s4"> </span><span class="s1">href</span><span class="s4">=</span>"https://erniezhuang.com/myfavicon.png"<span class="s4">&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;link </span><span class="s1">rel</span><span class="s4">=</span>"icon"<span class="s4"> </span><span class="s1">type</span><span class="s4">=</span>"image/x-icon"<span class="s4"> </span><span class="s1">href</span><span class="s4">=</span>"https://erniezhuang.com/myfavicon.ico"<span class="s4">&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;link </span><span class="s1">rel</span><span class="s4">=</span>"stylesheet"<span class="s4"> </span><span class="s1">href</span><span class="s4">=</span>"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"<span class="s4">&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;link </span><span class="s1">href</span><span class="s4">=</span>"https://fonts.googleapis.com/css2?family=Satisfy&amp;display=swap"<span class="s4"> </span><span class="s1">rel</span><span class="s4">=</span>"stylesheet"<span class="s4">&gt;</span></p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;style&gt;</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">body</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-family</span>: Arial, sans-serif;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">line-height</span>: <span class="s5">1.6</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">0</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">padding</span>: <span class="s5">0</span>;</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span>background-color<span class="s3">: </span><span class="s5">#fff</span><span class="s3">;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#333</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.container</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">max-width</span>: <span class="s5">900px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">0</span> auto;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">padding</span>: <span class="s5">20px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">header</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-align</span>: center;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-family</span>: <span class="s2">'Satisfy'</span>, cursive;<span class="Apple-converted-space"> </span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-size</span>: <span class="s5">40px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#3b5998</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin-bottom</span>: <span class="s5">20px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-weight</span>: bold;<span class="Apple-converted-space"> </span></p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">nav</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-align</span>: center;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin-bottom</span>: <span class="s5">30px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">border-bottom</span>: <span class="s5">2px</span> solid <span class="s5">#ccc</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">padding-bottom</span>: <span class="s5">10px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">nav</span> <span class="s4">a</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#888</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-decoration</span>: none;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">0</span> <span class="s5">15px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-size</span>: <span class="s5">20px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">nav</span> <span class="s4">a</span><span class="s6">.active</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: red;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">font-weight</span>: bold;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">border-bottom</span>: none;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">a</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#396c90</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-decoration</span>: none;<span class="Apple-converted-space"> </span></p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">a</span>:hover {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#ff8c00</span>;<span class="Apple-converted-space"> </span></p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.tags</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">20px</span> <span class="s5">0</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-align</span>: center;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.tags</span> <span class="s4">a</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">display</span>: inline-block;</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span>background-color<span class="s3">: </span><span class="s5">#f4f4f4</span><span class="s3">;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#333</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">padding</span>: <span class="s5">5px</span> <span class="s5">10px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">5px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">text-decoration</span>: none;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">border-radius</span>: <span class="s5">4px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.tags</span> <span class="s4">a</span>:hover {</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span>background-color<span class="s3">: </span><span class="s5">#ddd</span><span class="s3">;</span></p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.content</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin-top</span>: <span class="s5">20px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">h2</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">color</span>: <span class="s5">#3b5998</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin-top</span>: <span class="s5">20px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">p</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin</span>: <span class="s5">10px</span> <span class="s5">0</span>;</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">line-height</span>: <span class="s5">1.4</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.blog-post</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">margin-bottom</span>: <span class="s5">40px</span>;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s6">.hidden</span> {</p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">display</span>: none;</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;/style&gt;</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;script&gt;</p>
-<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s4">function</span><span class="s3"> </span>filterByTag<span class="s3">(</span>tag<span class="s3">) {</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">const</span> posts = <span class="s7">document</span>.querySelectorAll(<span class="s2">'.blog-post'</span>);</p>
-<p class="p4"><span class="Apple-converted-space">            </span>posts.forEach(<span class="s7">post</span> =&gt; {</p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">if</span> (tag === <span class="s2">'all'</span> || post.classList.contains(tag)) {</p>
-<p class="p4"><span class="Apple-converted-space">                    </span>post.classList.remove(<span class="s2">'hidden'</span>);</p>
-<p class="p4"><span class="Apple-converted-space">                </span>} <span class="s4">else</span> {</p>
-<p class="p4"><span class="Apple-converted-space">                    </span>post.classList.add(<span class="s2">'hidden'</span>);</p>
-<p class="p4"><span class="Apple-converted-space">                </span>}</p>
-<p class="p4"><span class="Apple-converted-space">            </span>});</p>
-<p class="p4"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;/script&gt;</p>
-<p class="p2">&lt;/head&gt;</p>
-<p class="p2">&lt;body&gt;</p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span>"container"<span class="s4">&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;header&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span>Ernie Cheng-Xiang Zhuang</p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;/header&gt;</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;nav&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span><span class="s2">"index.html"</span><span class="s4">&gt;</span>About Me<span class="s4">&lt;/a&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span><span class="s2">"research.html"</span><span class="s4">&gt;</span>Research<span class="s4">&lt;/a&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span><span class="s2">"resources.html"</span><span class="s4">&gt;</span>Resources<span class="s4">&lt;/a&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span>"blog.html"<span class="s4"> </span><span class="s1">class</span><span class="s4">=</span>"active"<span class="s4">&gt;</span><span class="s3">Blog</span><span class="s4">&lt;/a&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span><span class="s2">"contact.html"</span><span class="s4">&gt;</span>Contact<span class="s4">&lt;/a&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;/nav&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span><span class="s2">"tags"</span><span class="s4">&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span>"#"<span class="s4"> </span><span class="s1">onclick</span><span class="s4">=</span>"filterByTag('all')"<span class="s4">&gt;</span><span class="s3">All</span><span class="s4">&lt;/a&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span>"#"<span class="s4"> </span><span class="s1">onclick</span><span class="s4">=</span>"filterByTag('economics')"<span class="s4">&gt;</span><span class="s3">Economics</span><span class="s4">&lt;/a&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span>"#"<span class="s4"> </span><span class="s1">onclick</span><span class="s4">=</span>"filterByTag('research')"<span class="s4">&gt;</span><span class="s3">Research</span><span class="s4">&lt;/a&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;a </span><span class="s1">href</span><span class="s4">=</span>"#"<span class="s4"> </span><span class="s1">onclick</span><span class="s4">=</span>"filterByTag('life')"<span class="s4">&gt;</span><span class="s3">Life</span><span class="s4">&lt;/a&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span>"content"<span class="s4">&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span>"blog-post economics"<span class="s4">&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;h3&gt;</span>My First Economics Post<span class="s4">&lt;/h3&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;&lt;em&gt;</span>Posted on August 15, 2024<span class="s4">&lt;/em&gt;&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;</span>This is where you can write the content of your first economics blog post.<span class="s4">&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span>"blog-post research"<span class="s4">&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;h3&gt;</span>My Research Journey<span class="s4">&lt;/h3&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;&lt;em&gt;</span>Posted on August 20, 2024<span class="s4">&lt;/em&gt;&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;</span>This is where you can write about your research experiences.<span class="s4">&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s4">&lt;div </span><span class="s1">class</span><span class="s4">=</span>"blog-post life"<span class="s4">&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;h3&gt;</span>Balancing Life and Work<span class="s4">&lt;/h3&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;&lt;em&gt;</span>Posted on September 1, 2024<span class="s4">&lt;/em&gt;&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">                </span><span class="s4">&lt;p&gt;</span>This is where you can write about life balance and work.<span class="s4">&lt;/p&gt;</span></p>
-<p class="p4"><span class="Apple-converted-space">            </span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p6"><span class="s3"><span class="Apple-converted-space">            </span></span>&lt;!-- Add more blog posts here --&gt;</p>
-<p class="p4"><span class="Apple-converted-space">        </span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;/div&gt;</p>
-<p class="p2">&lt;/body&gt;</p>
-<p class="p2">&lt;/html&gt;</p>
+    <div class="container">
+        <header>
+            Ernie Cheng-Xiang Zhuang
+        </header>
+        <nav>
+            <a href="index.html">About Me</a>
+            <a href="research.html">Research</a>
+            <a href="resources.html">Resources</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="tags">
+            <a href="#" onclick="filterByTag('all')">All</a>
+            <a href="#" onclick="filterByTag('economics')">Economics</a>
+            <a href="#" onclick="filterByTag('research')">Research</a>
+            <a href="#" onclick="filterByTag('life')">Life</a>
+        </div>
+        <div class="content">
+            <div class="blog-post economics">
+                <h3>My First Economics Post</h3>
+                <p><em>Posted on August 15, 2024</em></p>
+                <p>This is where you can write the content of your first economics blog post.</p>
+            </div>
+            <div class="blog-post research">
+                <h3>My Research Journey</h3>
+                <p><em>Posted on August 20, 2024</em></p>
+                <p>This is where you can write about your research experiences.</p>
+            </div>
+            <div class="blog-post life">
+                <h3>Balancing Life and Work</h3>
+                <p><em>Posted on September 1, 2024</em></p>
+                <p>This is where you can write about life balance and work.</p>
+            </div>
+            <!-- Add more blog posts here -->
+        </div>
+    </div>
 </body>
 </html>
